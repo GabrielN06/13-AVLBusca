@@ -280,8 +280,28 @@ void buscarElementoArvore(NO* no, int valor) {
        
        IMPLEMENTE ESTA FUNÇÃO DE FORMA RECURSIVA!
     */
+
+    int elemento = valor;
+
+
+
+    if(no == NULL){
+        cout << "O elemento não existe na arvore\n";
+        return;
+    }
+
+        if(no->valor == elemento){
+            cout << "Elemento encontrado";
+            return;
+        }
+        else if(elemento < no->valor){
+            buscarElementoArvore(no->esq, elemento);
+        }
+        else{
+            buscarElementoArvore(no->dir, elemento);
+        }
+
     
     // TODO: Implemente a busca recursiva aqui
     
-    cout << "Funcao de busca nao implementada!\n";
 }
